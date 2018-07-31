@@ -1,7 +1,7 @@
 
 
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 const normalizePort = port => parseInt(port, 10);
 const PORT = normalizePort(process.env.PORT || 5000);
@@ -9,6 +9,8 @@ const PORT = normalizePort(process.env.PORT || 5000);
 app.get('/', function(req, res) {
     res.send('Hello World');
 }).listen(PORT);
+
+console.log("Waiting for requests. Go to LocalHost:5000");
 
 //stripe webhook listener
 app.post('/stripe/listener', function(request, response) {
