@@ -1,6 +1,3 @@
-//I think that this line could be axed?
-//const {createServer} = require ('http');
-//I think that this line could be axed
 
 
 var express = require('express');
