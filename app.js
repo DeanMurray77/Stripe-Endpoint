@@ -10,10 +10,12 @@ app.get('/', function(req, res) {
     res.send('Hello World');
 }).listen(PORT);
 
-//const server = createServer(app);
+//stripe webhook listener
+app.post('/stripe/listener', function(request, response) {
+    // Retrieve the request's body and parse it as JSON:
+    const event_json = JSON.parse(request.body);
 
-//server.listen(PORT, err => {
-//    if(err) throw err;
+    // Do something with event_json
 
-//    console.log('Server started!');
-//})
+    response.send(200);
+});
