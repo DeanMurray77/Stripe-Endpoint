@@ -12,6 +12,10 @@ app.get('/', function(req, res) {
 
 console.log("Waiting for requests. Go to LocalHost:5000");
 
+app.get('/stripe', function(req, res) {
+    res.send("You're at the Stripe directory");
+}).listen(PORT);
+
 //stripe webhook listener
 app.post('/stripe/listener', function(request, response) {
     // Retrieve the request's body and parse it as JSON:
