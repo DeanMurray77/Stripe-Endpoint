@@ -8,7 +8,8 @@ const PORT = normalizePort(process.env.PORT || 5000);
 
 app.get('/', function(req, res) {
     res.send('Hello World');
-}).listen(PORT);
+});
+    //.listen(PORT);
 
 console.log("Waiting for requests. Go to LocalHost:5000");
 
